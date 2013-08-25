@@ -53,6 +53,7 @@
 		3FF0F77815930F5500FD3DBA /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF0F77515930F5500FD3DBA /* Icon-72.png */; };
 		3FF0F77915930F5500FD3DBA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF0F77615930F5500FD3DBA /* Icon.png */; };
 		3FF0F77C15930FE200FD3DBA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF0F77B15930FE200FD3DBA /* Icon@2x.png */; };
+		4E380AC617C7CEE7009D733F /* ShareSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E380AC517C7CEE6009D733F /* ShareSearchViewController.m */; };
 		62592D7915D89ADB009D29B5 /* UploadBigFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62592D7715D89ADB009D29B5 /* UploadBigFileViewController.m */; };
 		62592D7A15D89ADB009D29B5 /* UploadBigFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62592D7815D89ADB009D29B5 /* UploadBigFileViewController.xib */; };
 		62D731091591B7BD000D5353 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D731081591B7BD000D5353 /* SearchViewController.m */; };
@@ -146,6 +147,8 @@
 		3FF0F77515930F5500FD3DBA /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		3FF0F77615930F5500FD3DBA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		3FF0F77B15930FE200FD3DBA /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		4E380AC417C7CEE6009D733F /* ShareSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareSearchViewController.h; sourceTree = "<group>"; };
+		4E380AC517C7CEE6009D733F /* ShareSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareSearchViewController.m; sourceTree = "<group>"; };
 		62592D7615D89ADB009D29B5 /* UploadBigFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadBigFileViewController.h; sourceTree = "<group>"; };
 		62592D7715D89ADB009D29B5 /* UploadBigFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadBigFileViewController.m; sourceTree = "<group>"; };
 		62592D7815D89ADB009D29B5 /* UploadBigFileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UploadBigFileViewController.xib; sourceTree = "<group>"; };
@@ -214,6 +217,8 @@
 				3FA19054158F469C002FF989 /* RootViewController.m */,
 				3F5A37DE15901A2500E40E58 /* CatalogViewController.h */,
 				3F5A37DF15901A2600E40E58 /* CatalogViewController.m */,
+				4E380AC417C7CEE6009D733F /* ShareSearchViewController.h */,
+				4E380AC517C7CEE6009D733F /* ShareSearchViewController.m */,
 			);
 			name = Example;
 			sourceTree = "<group>";
@@ -485,6 +490,7 @@
 				3FE3BF66165CCD8C00ACD976 /* BlitzViewController.m in Sources */,
 				3FBA43D316807C4F008F31CD /* RecommendViewController.m in Sources */,
 				3F83CF32169ACE0A0016D362 /* ShareFileToFriendsViewController.m in Sources */,
+				4E380AC617C7CEE7009D733F /* ShareSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -40,6 +40,8 @@
 #import "RecommendViewController.h"
 #import "ShareFileToFriendsViewController.h"
 
+#import "ShareSearchViewController.h"
+
 
 @interface CatalogViewController ()
 
@@ -95,7 +97,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return 5;
+    return 6;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -118,6 +120,9 @@
             break;
         case 4:
             rows = 2;
+            break;
+        case 5:
+            rows = 1;
             break;
         default:
             break;
@@ -250,6 +255,16 @@
             default:
                 break;
         }
+    } else if (indexPath.section == 5) {
+        
+        switch (indexPath.row) {
+                
+            case 0:
+                cell.textLabel.text = @"search share";
+                break;
+            default:
+                break;
+        }
     }
         
         
@@ -276,6 +291,10 @@
         case 4:
             sectionTitle = @"Shares";
             break;
+        case 5:
+            sectionTitle = @"search share";
+            break;
+            
         default:
             sectionTitle = @"";
             break;
@@ -424,6 +443,14 @@
             
         } else if (indexPath.row == 4) {
             
+            
+        }
+    }else if (indexPath.section == 5) {
+        
+        if (indexPath.row == 0) {
+            
+            ShareSearchViewController *shareSearchViewController = [[[ShareSearchViewController alloc] init] autorelease];
+            [self.navigationController pushViewController:shareSearchViewController animated:YES];
             
         }
     }
