@@ -10,6 +10,8 @@
 
 #import "VdiskRestClient.h"
 
+#import "VdiskSharesMetadata.h"   
+
 @interface ShareSearchViewController ()<VdiskRestClientDelegate>{
     VdiskRestClient *_vdiskRestClient;
 }
@@ -40,9 +42,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:6],@"type", nil];
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:6],@"type",
+                          @"epub",@"query", nil];
     
-    [_vdiskRestClient searchPath:@"/" forKeyword:@"epub" params:dict];
+//    [_vdiskRestClient searchPath:@"/" forKeyword:@"epub" params:dict];
+    [_vdiskRestClient loadShareList:kVdiskShareListTypeShareSearch params:dict];
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,27 +57,16 @@
 
 #pragma mark - VdiskRestClient delegate
 
-- (void)restClient:(VdiskRestClient *)restClient loadedSearchResults:(NSArray *)results forPath:(NSString *)path keyword:(NSString *)keyword {
-    
-    NSLog(@"%@",results);
-    
-//    self.listData = [NSMutableArray arrayWithArray:results];
-//    if ([self.listData count] == 0) {
-//        
-//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"No results found" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
-//        
-//        [alertView show];
-//        [alertView release];
-//    }
-//    [self.tableView reloadData];
-}
 
-- (void)restClient:(VdiskRestClient *)restClient searchFailedWithError:(NSError *)error {
+- (void)restClient:(VdiskRestClient *)client loadedShareList:(NSArray *)shareList shareListType:(VdiskShareListType)shareListType // results is a list of VdiskSharesMetadata * objects
+{
+    for (VdiskSharesMetadata *metadata in shareList) {
+        NSLog(@"%@",metadata.url);
+    }
+}
+- (void)restClient:(VdiskRestClient *)client loadShareListFailedWithError:(NSError *)error shareListType:(VdiskShareListType)shareListType
+{
     
-//    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"ERROR!!" message:[NSString stringWithFormat:@"Error!\n----------------\nerrno:%d\n%@\%@\n----------------", error.code, error.localizedDescription, [error userInfo]] delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
-//    
-//    [alertView show];
-//    [alertView release];
 }
 
 
