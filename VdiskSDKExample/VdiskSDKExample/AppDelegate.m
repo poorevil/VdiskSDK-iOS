@@ -23,14 +23,14 @@
 #import "CatalogViewController.h"
 
 
-/*
+
 #define kVdiskSDKDemoAppKey             @"2383464159"
 #define kVdiskSDKDemoAppSecret          @"47e65316cc4d6a507a15c8abf7dbfa86"
 #define kVdiskSDKDemoAppRedirectURI     @"http://www.sina.com"
-*/
-#define kVdiskSDKDemoAppKey                           @"1760281982"
-#define kVdiskSDKDemoAppSecret                        @"8f836595aff61dd26028c9a381109631"
-#define kVdiskSDKDemoAppRedirectURI                   @"http://vauth.appsina.com/callback.php"
+
+//#define kVdiskSDKDemoAppKey                           @"1760281982"
+//#define kVdiskSDKDemoAppSecret                        @"8f836595aff61dd26028c9a381109631"
+//#define kVdiskSDKDemoAppRedirectURI                   @"http://vauth.appsina.com/callback.php"
 
 #define kWeiboAppKey                    @"Weibo AppKey"
 #define kWeiboAppSecret                 @"Weibo AppSecret"

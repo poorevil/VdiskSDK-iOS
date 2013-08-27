@@ -42,8 +42,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:6],@"type",
-                          @"epub",@"query", nil];
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"6",@"type",
+                          @"epub",@"query",
+                          @"count_download",@"sort_order",
+                          nil];
     
 //    [_vdiskRestClient searchPath:@"/" forKeyword:@"epub" params:dict];
     [_vdiskRestClient loadShareList:kVdiskShareListTypeShareSearch params:dict];
@@ -61,7 +63,7 @@
 - (void)restClient:(VdiskRestClient *)client loadedShareList:(NSArray *)shareList shareListType:(VdiskShareListType)shareListType // results is a list of VdiskSharesMetadata * objects
 {
     for (VdiskSharesMetadata *metadata in shareList) {
-        NSLog(@"%@",metadata.url);
+        NSLog(@"%@------%@",metadata.name,metadata.url);
     }
 }
 - (void)restClient:(VdiskRestClient *)client loadShareListFailedWithError:(NSError *)error shareListType:(VdiskShareListType)shareListType
